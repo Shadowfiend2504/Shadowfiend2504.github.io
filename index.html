@@ -467,10 +467,23 @@ async function loadGithubProjects() {
         const repos = await res.json();
         // Validar si la respuesta es un array
         if (!Array.isArray(repos)) {
+            let errorMsg = 'No se pudieron cargar los proyectos de GitHub.';
+            let details = '';
+            if (repos && typeof repos === 'object' && repos.message) {
+                if (repos.message.includes('API rate limit exceeded')) {
+                    details = 'Has alcanzado el límite de peticiones de la API de GitHub. Intenta de nuevo más tarde.';
+                } else if (repos.message.includes('Bad credentials')) {
+                    details = 'Error de autenticación con la API de GitHub.';
+                } else {
+                    details = repos.message;
+                }
+            } else {
+                details = '(Error desconocido o de conexión)';
+            }
             container.innerHTML = `
-            <div class="alert alert-danger d-flex align-items-center justify-content-center" role="alert" style="font-size:1.1rem;">
-                <i class="fas fa-exclamation-triangle me-2"></i>
-                <span>No se pudieron cargar los proyectos de GitHub.<br><small>(Límite de peticiones o error de autenticación)</small></span>
+            <div class="alert alert-danger d-flex flex-column align-items-center justify-content-center text-center" role="alert" style="font-size:1.1rem;">
+                <i class="fas fa-exclamation-triangle mb-2" style="font-size:2rem;"></i>
+                <span>${errorMsg}<br><small>${details}</small></span>
             </div>`;
             return;
         }
@@ -551,8 +564,8 @@ async function loadGithubProjects() {
         container.innerHTML = html;
     } catch (e) {
         container.innerHTML = `
-        <div class="alert alert-danger d-flex align-items-center justify-content-center" role="alert" style="font-size:1.1rem;">
-            <i class="fas fa-exclamation-triangle me-2"></i>
+        <div class="alert alert-danger d-flex flex-column align-items-center justify-content-center text-center" role="alert" style="font-size:1.1rem;">
+            <i class="fas fa-exclamation-triangle mb-2" style="font-size:2rem;"></i>
             <span>No se pudieron cargar los proyectos de GitHub.<br><small>(Error de conexión o de la API)</small></span>
         </div>`;
     }
