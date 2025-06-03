@@ -25,9 +25,12 @@
                     <i class="fas fa-bars"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ms-auto">
+                    <ul class="navbar-nav ms-auto" id="dynamic-nav-tabs">
                         <li class="nav-item"><a class="nav-link" href="#about">Sobre mí</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#projects">Proyectos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#featured-projects">Proyectos Destacados</a></li>
+                        <li class="nav-item d-none" id="nav-experience-item"><a class="nav-link" id="nav-experience" href="#experience">Experiencia</a></li>
+                        <li class="nav-item d-none" id="nav-skills-item"><a class="nav-link" id="nav-skills" href="#skills">Habilidades</a></li>
+                        <li class="nav-item d-none" id="nav-projects-item"><a class="nav-link" id="nav-projects" href="#projects">Proyectos</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
                     </ul>
                 </div>
@@ -64,29 +67,69 @@
                 </div>
             </div>
         </section>
-        <!-- Projects-->
-        <section class="projects-section bg-light" id="projects">
+                <!-- Proyectos Destacados -->
+        <section class="featured-projects-section text-center" id="featured-projects">
             <div class="container px-4 px-lg-5">
-                <!-- Proyecto Destacado -->
-                <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
-                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="assets/img/BusinessHealth.png" alt="Vista previa de GestionCitasMedicas" /></div>
-                    <div class="col-xl-4 col-lg-5">
-                        <div class="featured-text text-center text-lg-left">
-                            <h4>GestionCitasMedicas</h4>
-                            <p class="text-black-50 mb-0">Aplicación web para la gestión de citas médicas, pacientes y profesionales de la salud. Permite a los usuarios agendar, consultar y cancelar citas, así como administrar la información de pacientes y médicos de manera eficiente y segura.</p>
-                            <a href="https://github.com/Shadowfiend2504/GestionCitasMedicas" target="_blank" rel="noopener" class="btn btn-dark mt-3"><i class="fab fa-github"></i> Ver en GitHub</a>
+                <h2 class="text-morado mb-4">Proyectos Destacados</h2>
+                <div class="row justify-content-center">
+                    <!-- Gestión de Citas Médicas -->
+                    <div class="col-md-5 mb-4">
+                        <div class="card h-100 shadow border-0" style="background: #1a1333; color: #fff; padding-right: 1.5rem !important; padding-left: 1.5rem !important; max-width: 500px;">
+                            <div class="card-body d-flex flex-column justify-content-between h-100">
+                                <img src="assets/img/BusinessHealth.png" class="card-img-top mb-3" alt="Gestión de Citas Médicas" style="border-radius: 0.5rem; max-height: 180px; object-fit: cover;">
+                                <h5 class="card-title text-primary">Gestión de Citas Médicas</h5>
+                                <p class="card-text">Aplicación web para la administración de citas médicas, integrando bases de datos y envío de correos electrónicos.</p>
+                                <div class="mb-2 d-flex flex-wrap justify-content-center gap-2">
+                                    <span class="skill-card p-2 text-center" style="background:#18192b; border-radius:12px; min-width:60px; max-width:80px;">
+                                        <i class="fab fa-html5" title="HTML" style="font-size:1.5rem; color:#E44D26;"></i>
+                                        <div style="color:#fff; font-size:0.9rem;">HTML</div>
+                                    </span>
+                                    <span class="skill-card p-2 text-center" style="background:#18192b; border-radius:12px; min-width:60px; max-width:80px;">
+                                        <i class="fab fa-css3-alt" title="CSS" style="font-size:1.5rem; color:#1572B6;"></i>
+                                        <div style="color:#fff; font-size:0.9rem;">CSS</div>
+                                    </span>
+                                    <span class="skill-card p-2 text-center" style="background:#18192b; border-radius:12px; min-width:60px; max-width:80px;">
+                                        <i class="fab fa-js" title="JavaScript" style="font-size:1.5rem; color:#F7DF1E;"></i>
+                                        <div style="color:#fff; font-size:0.9rem;">JavaScript</div>
+                                    </span>
+                                    <span class="skill-card p-2 text-center" style="background:#18192b; border-radius:12px; min-width:60px; max-width:80px;">
+                                        <i class="fab fa-python" title="Python" style="font-size:1.5rem; color:#3776AB;"></i>
+                                        <div style="color:#fff; font-size:0.9rem;">Python</div>
+                                    </span>
+                                </div>
+                                <div class="d-flex justify-content-center gap-2 mt-auto pt-3">
+                                    <a href="https://github.com/Shadowfiend2504/GestionCitasMedicas" target="_blank" class="btn btn-outline-light m-1 px-4" style="min-width:120px;"><i class="fab fa-github me-2"></i>GITHUB</a>
+                                    <a href="#" target="_blank" class="btn m-1 px-4" style="background:#000; color:#fff; min-width:120px; border-radius:0.375rem; border:1px solid #000; opacity:0.7; cursor:not-allowed;" aria-disabled="true">VER DEMO</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <!-- Otros proyectos -->
-                <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
-                    <div class="col-lg-6">
-                        <div class="bg-black text-center h-100 project">
-                            <div class="d-flex h-100">
-                                <div class="project-text w-100 my-auto text-center text-lg-left">
-                                    <h4 class="text-white">Más proyectos</h4>
-                                    <p class="mb-0 text-white-50">Encuentra más proyectos en mi GitHub.</p>
-                                    <a href="https://github.com/Shadowfiend2504" target="_blank" rel="noopener" class="btn btn-outline-light mt-3"><i class="fab fa-github"></i> GitHub</a>
+                    <!-- Monitoreo de Recursos del PC -->
+                    <div class="col-md-5 mb-4">
+                        <div class="card h-100 shadow border-0" style="background: #1a1333; color: #fff; padding-right: 1.5rem !important; padding-left: 1.5rem !important; max-width: 500px;">
+                            <div class="card-body d-flex flex-column justify-content-between h-100">
+                                <img src="assets/img/PCMonitoring.png" class="card-img-top mb-3" alt="Monitoreo de Recursos del PC" style="border-radius: 0.5rem; max-height: 180px; object-fit: cover;">
+                                <h5 class="card-title text-primary">Monitoreo de Recursos del PC</h5>
+                                <p class="card-text">Herramienta para supervisar el uso de recursos del sistema en tiempo real.</p>
+                                <div class="mb-2 d-flex flex-wrap justify-content-center gap-2">
+                                    <span class="skill-card p-2 text-center" style="background:#18192b; border-radius:12px; min-width:60px; max-width:80px;">
+                                        <i class="fab fa-python" title="Python" style="font-size:1.5rem; color:#3776AB;"></i>
+                                        <div style="color:#fff; font-size:0.9rem;">Python</div>
+                                    </span>
+                                    <span class="skill-card p-2 text-center" style="background:#18192b; border-radius:12px; min-width:60px; max-width:80px;">
+                                        <i class="fas fa-terminal" title="Bash" style="font-size:1.5rem; color:#4EAA25;"></i>
+                                        <div style="color:#fff; font-size:0.9rem;">Bash</div>
+                                    </span>
+                                    <span class="skill-card p-2 text-center" style="background:#18192b; border-radius:12px; min-width:60px; max-width:80px;">
+                                        <i class="fas fa-file-code" title="Batch" style="font-size:1.5rem; color:#6C6C6C;"></i>
+                                        <div style="color:#fff; font-size:0.9rem;">Batch</div>
+                                    </span>
+                                </div>
+                                <div class="d-flex flex-column mt-auto pt-3 gap-2">
+                                    <div class="d-flex justify-content-center gap-2">
+                                        <a href="https://github.com/Shadowfiend2504/Monitoreo-de-recursos-pc" target="_blank" class="btn btn-outline-light m-1 px-4" style="min-width:120px;"><i class="fab fa-github me-2"></i>GITHUB</a>
+                                        <a href="#" target="_blank" class="btn m-1 px-4" style="background:#000; color:#fff; min-width:120px; border-radius:0.375rem; border:1px solid #000; opacity:0.7; cursor:not-allowed;" aria-disabled="true">VER DEMO</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -94,36 +137,235 @@
                 </div>
             </div>
         </section>
-        <!-- Contact-->
-        <section class="contact-section bg-black" id="contact">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5">
-                    <div class="col-md-6 mb-3 mb-md-0">
-                        <div class="card py-4 h-100">
-                            <div class="card-body text-center">
-                                <i class="fas fa-envelope text-primary mb-2"></i>
-                                <h4 class="text-uppercase m-0">Email</h4>
-                                <hr class="my-4 mx-auto" />
-                                <div class="small text-black-50"><a href="mailto:jcarvajal25@uan.edu.co">jcarvajal25@uan.edu.co</a></div>
+        <!-- NAV TABS PERSONALIZADO -->
+        <div class="custom-tabs-container d-flex justify-content-center my-5">
+            <nav class="nav nav-pills nav-justified bg-dark rounded-pill p-2" id="portfolioTabs" role="tablist">
+                <button class="nav-link active" id="projects-tab" data-bs-toggle="pill" data-bs-target="#projects-section" type="button" role="tab" aria-controls="projects-section" aria-selected="true">Proyectos</button>
+                <button class="nav-link" id="experience-tab" data-bs-toggle="pill" data-bs-target="#experience-section" type="button" role="tab" aria-controls="experience-section" aria-selected="false">Experiencia</button>
+                <button class="nav-link" id="skills-tab" data-bs-toggle="pill" data-bs-target="#skills-section" type="button" role="tab" aria-controls="skills-section" aria-selected="false">Habilidades</button>
+            </nav>
+        </div>
+        <div class="tab-content" id="portfolioTabsContent">
+            <div class="tab-pane fade show active" id="projects-section" role="tabpanel" aria-labelledby="projects-tab">
+                <!-- Proyectos destacados de GitHub -->
+                <h2 class="text-morado mb-4 text-center">Proyectos</h2>
+                <div class="row justify-content-center px-3 px-md-5 py-4 my-3" id="dynamic-projects-list" style="margin-left:0; margin-right:0;">
+                    <!-- Proyecto Base de Datos -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100 shadow border-0" style="background: #1a1333; color: #fff; padding-right: 1.5rem !important; padding-left: 1.5rem !important; max-width: 500px;">
+                            <div class="card-body d-flex flex-column justify-content-between h-100">
+                                <h5 class="card-title text-primary">Proyecto Base de Datos</h5>
+                                <p class="card-text">Sistema para gestionar información de integrantes de una banda musical, permitiendo consultas y modificaciones eficientes.</p>
+                                <div class="mb-2 d-flex flex-wrap justify-content-center gap-2">
+                                    <span class="skill-card p-2 text-center" style="background:#18192b; border-radius:12px; min-width:60px; max-width:80px;">
+                                        <i class="fab fa-python" title="Python" style="font-size:1.5rem; color:#3776AB;"></i>
+                                        <div style="color:#fff; font-size:0.9rem;">Python</div>
+                                    </span>
+                                    <span class="skill-card p-2 text-center" style="background:#18192b; border-radius:12px; min-width:60px; max-width:80px;">
+                                        <i class="fas fa-database" title="SQL" style="font-size:1.5rem; color:#00758F;"></i>
+                                        <div style="color:#fff; font-size:0.9rem;">SQL</div>
+                                    </span>
+                                </div>
+                                <div class="d-flex flex-column mt-auto pt-3 gap-2">
+                                    <div class="d-flex justify-content-center gap-2">
+                                        <a href="https://github.com/Shadowfiend2504/Grupo-3" target="_blank" class="btn btn-outline-light m-1 px-4" style="min-width:120px;"><i class="fab fa-github me-2"></i>GITHUB</a>
+                                        <a href="#" target="_blank" class="btn m-1 px-4" style="background:#000; color:#fff; min-width:120px; border-radius:0.375rem; border:1px solid #000; opacity:0.7; cursor:not-allowed;" aria-disabled="true">VER DEMO</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 mb-3 mb-md-0">
-                        <div class="card py-4 h-100">
-                            <div class="card-body text-center">
-                                <i class="fas fa-mobile-alt text-primary mb-2"></i>
-                                <h4 class="text-uppercase m-0">WhatsApp</h4>
-                                <hr class="my-4 mx-auto" />
-                                <div class="small text-black-50"><a href="https://wa.me/573013657443" target="_blank">+57 301 3657443</a></div>
+                    <!-- Juego de Memoria -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100 shadow border-0" style="background: #1a1333; color: #fff; padding-right: 1.5rem !important; padding-left: 1.5rem !important; max-width: 500px;">
+                            <div class="card-body d-flex flex-column justify-content-between h-100">
+                                <h5 class="card-title text-primary">Juego de Memoria</h5>
+                                <p class="card-text">Juego interactivo desarrollado con Python y Tkinter para mejorar habilidades cognitivas.</p>
+                                <div class="mb-2 d-flex flex-wrap justify-content-center gap-2">
+                                    <span class="skill-card p-2 text-center" style="background:#18192b; border-radius:12px; min-width:60px; max-width:80px;">
+                                        <i class="fab fa-python" title="Python" style="font-size:1.5rem; color:#3776AB;"></i>
+                                        <div style="color:#fff; font-size:0.9rem;">Python</div>
+                                    </span>
+                                </div>
+                                <div class="d-flex flex-column mt-auto pt-3 gap-2">
+                                    <div class="d-flex justify-content-center gap-2">
+                                        <a href="https://github.com/Shadowfiend2504/-Memoria-o-Busca-las-parejas" target="_blank" class="btn btn-outline-light m-1 px-4" style="min-width:120px;"><i class="fab fa-github me-2"></i>GITHUB</a>
+                                        <a href="#" target="_blank" class="btn m-1 px-4" style="background:#000; color:#fff; min-width:120px; border-radius:0.375rem; border:1px solid #000; opacity:0.7; cursor:not-allowed;" aria-disabled="true">VER DEMO</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Generador de Códigos QR -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100 shadow border-0" style="background: #1a1333; color: #fff; padding-right: 1.5rem !important; padding-left: 1.5rem !important; max-width: 500px;">
+                            <div class="card-body d-flex flex-column justify-content-between h-100">
+                                <h5 class="card-title text-primary">Generador de Códigos QR</h5>
+                                <p class="card-text">Aplicación que crea códigos QR personalizados para diversos usos.</p>
+                                <div class="mb-2 d-flex flex-wrap justify-content-center gap-2">
+                                    <span class="skill-card p-2 text-center" style="background:#18192b; border-radius:12px; min-width:60px; max-width:80px;">
+                                        <i class="fab fa-python" title="Python" style="font-size:1.5rem; color:#3776AB;"></i>
+                                        <div style="color:#fff; font-size:0.9rem;">Python</div>
+                                    </span>
+                                </div>
+                                <div class="d-flex flex-column mt-auto pt-3 gap-2">
+                                    <div class="d-flex justify-content-center gap-2">
+                                        <a href="https://github.com/Shadowfiend2504/Generador_qr" target="_blank" class="btn btn-outline-light m-1 px-4" style="min-width:120px;"><i class="fab fa-github me-2"></i>GITHUB</a>
+                                        <a href="#" target="_blank" class="btn m-1 px-4" style="background:#000; color:#fff; min-width:120px; border-radius:0.375rem; border:1px solid #000; opacity:0.7; cursor:not-allowed;" aria-disabled="true">VER DEMO</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="social d-flex justify-content-center mt-4">
-                    <a class="mx-2" href="https://www.linkedin.com/in/js-carvajal-66821a346/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="mx-2" href="https://github.com/Shadowfiend2504" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                    <a class="mx-2" href="https://wa.me/573013657443" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                    <a class="mx-2" href="https://twitter.com/JuanSeb11111679" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+            <div class="tab-pane fade" id="experience-section" role="tabpanel" aria-labelledby="experience-tab">
+                <!-- Experiencia -->
+                <div class="container px-4 px-lg-5">
+                    <h2 class="text-morado mb-4 text-center">Experiencia</h2>
+                    <div class="row justify-content-center">
+                        <div class="col-md-8 text-white-50">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item bg-transparent text-white-50">
+                                    <strong>Desarrollador Freelance</strong> – Proyectos personales y colaborativos (2023 - Actualidad)
+                                    <br>
+                                    Desarrollo de aplicaciones web y scripts automatizados para clientes y proyectos propios.
+                                </li>
+                                <!-- Agrega más experiencias aquí -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="skills-section" role="tabpanel" aria-labelledby="skills-tab">
+                <!-- Habilidades -->
+                <div class="container px-4 px-lg-5">
+                    <h2 class="text-morado mb-4 text-center">Habilidades</h2>
+                    <div class="row justify-content-center">
+                        <div class="col-md-8 d-flex flex-wrap justify-content-center">
+                            <!-- HTML -->
+                            <div class="skill-card m-2 p-3 text-center" style="background:#18192b; border-radius:16px; min-width:120px; max-width:140px;">
+                                <i class="fab fa-html5" title="HTML" style="font-size:2.5rem; color:#E44D26;"></i>
+                                <div class="mt-2" style="color:#fff; font-weight:600;">HTML</div>
+                            </div>
+                            <!-- CSS -->
+                            <div class="skill-card m-2 p-3 text-center" style="background:#18192b; border-radius:16px; min-width:120px; max-width:140px;">
+                                <i class="fab fa-css3-alt" title="CSS" style="font-size:2.5rem; color:#1572B6;"></i>
+                                <div class="mt-2" style="color:#fff; font-weight:600;">CSS</div>
+                            </div>
+                            <!-- JavaScript -->
+                            <div class="skill-card m-2 p-3 text-center" style="background:#18192b; border-radius:16px; min-width:120px; max-width:140px;">
+                                <i class="fab fa-js" title="JavaScript" style="font-size:2.5rem; color:#F7DF1E;"></i>
+                                <div class="mt-2" style="color:#fff; font-weight:600;">JavaScript</div>
+                            </div>
+                            <!-- C -->
+                            <div class="skill-card m-2 p-3 text-center" style="background:#18192b; border-radius:16px; min-width:120px; max-width:140px;">
+                                <img src="assets/img/c-logo.png" alt="C logo" style="height:2.5rem; margin-bottom:2px;"/>
+                                <div class="mt-2" style="color:#fff; font-weight:600;">C</div>
+                            </div>
+                            <!-- C++ -->
+                            <div class="skill-card m-2 p-3 text-center" style="background:#18192b; border-radius:16px; min-width:120px; max-width:140px;">
+                                <img src="assets/img/cpp-logo.png" alt="C++ logo" style="height:2.5rem; margin-bottom:2px;"/>
+                                <div class="mt-2" style="color:#fff; font-weight:600;">C++</div>
+                            </div>
+                            <!-- Python -->
+                            <div class="skill-card m-2 p-3 text-center" style="background:#18192b; border-radius:16px; min-width:120px; max-width:140px;">
+                                <i class="fab fa-python" title="Python" style="font-size:2.5rem; color:#3776AB;"></i>
+                                <div class="mt-2" style="color:#fff; font-weight:600;">Python</div>
+                            </div>
+                            <!-- MySQL -->
+                            <div class="skill-card m-2 p-3 text-center" style="background:#18192b; border-radius:16px; min-width:120px; max-width:140px;">
+                                <i class="fas fa-database" title="MySQL" style="font-size:2.5rem; color:#00758F;"></i>
+                                <div class="mt-2" style="color:#fff; font-weight:600;">MySQL</div>
+                            </div>
+                            <!-- Git -->
+                            <div class="skill-card m-2 p-3 text-center" style="background:#18192b; border-radius:16px; min-width:120px; max-width:140px;">
+                                <i class="fab fa-git-alt" title="Git" style="font-size:2.5rem; color:#F05032;"></i>
+                                <div class="mt-2" style="color:#fff; font-weight:600;">Git</div>
+                            </div>
+                            <!-- GitHub -->
+                            <div class="skill-card m-2 p-3 text-center" style="background:#18192b; border-radius:16px; min-width:120px; max-width:140px;">
+                                <i class="fab fa-github" title="GitHub" style="font-size:2.5rem; color:#fff;"></i>
+                                <div class="mt-2" style="color:#fff; font-weight:600;">GitHub</div>
+                            </div>
+                            <!-- AWS -->
+                            <div class="skill-card m-2 p-3 text-center" style="background:#18192b; border-radius:16px; min-width:120px; max-width:140px;">
+                                <i class="fab fa-aws" title="AWS" style="font-size:2.5rem; color:#FF9900;"></i>
+                                <div class="mt-2" style="color:#fff; font-weight:600;">AWS</div>
+                            </div>
+                            <!-- Bash -->
+                            <div class="skill-card m-2 p-3 text-center" style="background:#18192b; border-radius:16px; min-width:120px; max-width:140px;">
+                                <i class="fas fa-terminal" title="Bash" style="font-size:2.5rem; color:#4EAA25;"></i>
+                                <div class="mt-2" style="color:#fff; font-weight:600;">Bash</div>
+                            </div>
+                            <!-- Batch -->
+                            <div class="skill-card m-2 p-3 text-center" style="background:#18192b; border-radius:16px; min-width:120px; max-width:140px;">
+                                <i class="fas fa-file-code" title="Batch" style="font-size:2.5rem; color:#6C6C6C;"></i>
+                                <div class="mt-2" style="color:#fff; font-weight:600;">Batch</div>
+                            </div>
+                            <!-- Agrega más habilidades si lo deseas -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Contacto con formulario tipo anthonyrovira.com -->
+        <section class="contact-section bg-black" id="contact">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-6">
+                        <div class="card py-4 h-100">
+                            <div class="card-body">
+                                <h4 class="text-uppercase m-0 text-center">Contacto</h4>
+                                <hr class="my-4 mx-auto" />
+                                <form action="mailto:jcarvajal25@uan.edu.co" method="POST" enctype="text/plain">
+                                    <div class="mb-3">
+                                        <input type="text" class="form-control" name="Nombre" placeholder="Tu nombre" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="email" class="form-control" name="Email" placeholder="Tu correo electrónico" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <textarea class="form-control" name="Mensaje" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
+                                    </div>
+                                    <div class="d-grid">
+                                        <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Enviar mensaje</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="card h-100 p-4 d-flex flex-column justify-content-center" style="background:#18192b; border-radius:16px; color:#fff;">
+                            <h5 class="mb-3" style="font-weight:700;">Conectemos</h5>
+                            <p class="mb-4" style="color:#bdbdbd;">No dudes en contactarme en cualquiera de estas plataformas:</p>
+                            <div class="d-grid gap-3 mb-3">
+                                <a href="https://www.linkedin.com/in/js-carvajal-66821a346/" target="_blank" class="btn btn-dark d-flex align-items-center justify-content-start" style="background:#23243a; border:none; border-radius:10px;">
+                                    <i class="fab fa-linkedin-in fa-lg me-3" style="color:#0A66C2;"></i>
+                                    <span class="fw-bold">LinkedIn</span>
+                                    <span class="ms-auto" style="font-size:0.9em; color:#bdbdbd;">/in/js-carvajal-66821a346</span>
+                                </a>
+                                <a href="https://github.com/Shadowfiend2504" target="_blank" class="btn btn-dark d-flex align-items-center justify-content-start" style="background:#23243a; border:none; border-radius:10px;">
+                                    <i class="fab fa-github fa-lg me-3" style="color:#fff;"></i>
+                                    <span class="fw-bold">GitHub</span>
+                                    <span class="ms-auto" style="font-size:0.9em; color:#bdbdbd;">/Shadowfiend2504</span>
+                                </a>
+                                <a href="https://wa.me/573013657443" target="_blank" class="btn btn-dark d-flex align-items-center justify-content-start" style="background:#23243a; border:none; border-radius:10px;">
+                                    <i class="fab fa-whatsapp fa-lg me-3" style="color:#25D366;"></i>
+                                    <span class="fw-bold">WhatsApp</span>
+                                    <span class="ms-auto" style="font-size:0.9em; color:#bdbdbd;">+57 301 3657443</span>
+                                </a>
+                                <a href="https://twitter.com/JuanSeb11111679" target="_blank" class="btn btn-dark d-flex align-items-center justify-content-start" style="background:#23243a; border:none; border-radius:10px;">
+                                    <i class="fab fa-twitter fa-lg me-3" style="color:#1DA1F2;"></i>
+                                    <span class="fw-bold">Twitter</span>
+                                    <span class="ms-auto" style="font-size:0.9em; color:#bdbdbd;">@JuanSeb11111679</span>
+                                </a>
+                            </div>
+                            <div class="mt-3" style="font-size:0.95em; color:#bdbdbd;">
+                                ¿Prefieres el correo electrónico? Escríbeme a: <a href="mailto:jcarvajal25@uan.edu.co" style="color:#a78bfa;">jcarvajal25@uan.edu.co</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -136,5 +378,186 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <script>
+        function showOnlyNav(tabId) {
+            document.getElementById('nav-experience-item').classList.add('d-none');
+            document.getElementById('nav-skills-item').classList.add('d-none');
+            document.getElementById('nav-projects-item').classList.add('d-none');
+            if(tabId === 'experience-section') {
+                document.getElementById('nav-experience-item').classList.remove('d-none');
+            } else if(tabId === 'skills-section') {
+                document.getElementById('nav-skills-item').classList.remove('d-none');
+            } else if(tabId === 'projects-section') {
+                document.getElementById('nav-projects-item').classList.remove('d-none');
+            }
+        }
+        function setActiveNav(tabId) {
+            document.getElementById('nav-experience').classList.remove('active');
+            document.getElementById('nav-skills').classList.remove('active');
+            document.getElementById('nav-projects').classList.remove('active');
+            if(tabId === 'experience-section') {
+                document.getElementById('nav-experience').classList.add('active');
+            } else if(tabId === 'skills-section') {
+                document.getElementById('nav-skills').classList.add('active');
+            } else if(tabId === 'projects-section') {
+                document.getElementById('nav-projects').classList.add('active');
+            }
+        }
+        function getCurrentTabByScroll() {
+            const experience = document.getElementById('experience-section');
+            const skills = document.getElementById('skills-section');
+            const projects = document.getElementById('projects-section');
+            const scrollY = window.scrollY || window.pageYOffset;
+            const offset = 120; // Ajuste para navbar fija
+            // Obtener posiciones de cada sección
+            const experienceTop = experience ? experience.offsetTop : Infinity;
+            const skillsTop = skills ? skills.offsetTop : Infinity;
+            const projectsTop = projects ? projects.offsetTop : Infinity;
+            // Obtener la posición actual del scroll
+            const scrollPos = scrollY + offset;
+            // Determinar cuál sección está más cerca pero no pasada
+            let closest = null;
+            let minDiff = Infinity;
+            [
+                {id: 'experience-section', top: experienceTop},
+                {id: 'skills-section', top: skillsTop},
+                {id: 'projects-section', top: projectsTop}
+            ].forEach(function(section) {
+                if (scrollPos >= section.top && (scrollPos - section.top) < minDiff) {
+                    closest = section.id;
+                    minDiff = scrollPos - section.top;
+                }
+            });
+            return closest;
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            var tabButtons = [
+                {btn: document.getElementById('projects-tab'), tab: 'projects-section'},
+                {btn: document.getElementById('experience-tab'), tab: 'experience-section'},
+                {btn: document.getElementById('skills-tab'), tab: 'skills-section'}
+            ];
+            tabButtons.forEach(function(item) {
+                if(item.btn) {
+                    item.btn.addEventListener('shown.bs.tab', function() {
+                        setActiveNav(item.tab);
+                        showOnlyNav(item.tab);
+                    });
+                }
+            });
+            // Al cargar, mostrar solo el tab de proyectos
+            setActiveNav('projects-section');
+            showOnlyNav('projects-section');
+            // Sincronizar con scroll
+            window.addEventListener('scroll', function() {
+                const tabId = getCurrentTabByScroll();
+                if(tabId) {
+                    setActiveNav(tabId);
+                    showOnlyNav(tabId);
+                }
+            });
+        });
+        // Carga dinámica de proyectos desde GitHub
+async function loadGithubProjects() {
+    const username = 'Shadowfiend2504';
+    const apiUrl = `https://api.github.com/users/${username}/repos?sort=updated&per_page=9`;
+    const container = document.getElementById('dynamic-projects-list');
+    if (!container) return;
+    try {
+        const res = await fetch(apiUrl);
+        const repos = await res.json();
+        // Validar si la respuesta es un array
+        if (!Array.isArray(repos)) {
+            container.innerHTML = `
+            <div class="alert alert-danger d-flex align-items-center justify-content-center" role="alert" style="font-size:1.1rem;">
+                <i class="fas fa-exclamation-triangle me-2"></i>
+                <span>No se pudieron cargar los proyectos de GitHub.<br><small>(Límite de peticiones o error de autenticación)</small></span>
+            </div>`;
+            return;
+        }
+        // Solo los primeros 8 proyectos para mostrar como cards
+        const projects = repos.slice(0, 8);
+        let html = '';
+        // Para cada repo, obtener los lenguajes usados
+        const languagePromises = projects.map(repo => fetch(repo.languages_url).then(async r => {
+            try {
+                const data = await r.json();
+                // Validar que no sea un error de la API
+                if (data && typeof data === 'object' && !Array.isArray(data) && !data.message && !data.documentation_url) {
+                    return data;
+                } else {
+                    return {};
+                }
+            } catch {
+                return {};
+            }
+        }));
+        const languagesList = await Promise.all(languagePromises);
+        projects.forEach((repo, idx) => {
+            // Obtener todos los lenguajes usados en el repo
+            const languages = Object.keys(languagesList[idx] || {});
+            // Card de proyecto
+            html += `
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow border-0" style="background: #1a1333; color: #fff; padding-right: 1.5rem !important; padding-left: 1.5rem !important; max-width: 500px;">
+                    <div class="card-body d-flex flex-column justify-content-between h-100">
+                        <h5 class="card-title text-primary">${repo.name.replace(/[-_]/g, ' ')}</h5>
+                        <p class="card-text">${repo.description ? repo.description : 'Proyecto sin descripción.'}</p>
+                        <div class="mb-2 d-flex flex-wrap justify-content-center gap-2">
+                            ${languages.length > 0 ? languages.map(tech => {
+                                let icon = '';
+                                let color = '#fff';
+                                let customImg = '';
+                                if (tech === 'Python') { icon = 'fab fa-python'; color = '#3776AB'; }
+                                else if (tech === 'JavaScript') { icon = 'fab fa-js'; color = '#F7DF1E'; }
+                                else if (tech === 'HTML') { icon = 'fab fa-html5'; color = '#E44D26'; }
+                                else if (tech === 'CSS') { icon = 'fab fa-css3-alt'; color = '#1572B6'; }
+                                else if (tech === 'C++') { customImg = 'assets/img/cpp-logo.png'; }
+                                else if (tech === 'C') { customImg = 'assets/img/c-logo.png'; }
+                                else if (tech === 'Java') { icon = 'fab fa-java'; color = '#007396'; }
+                                else if (tech === 'PHP') { icon = 'fab fa-php'; color = '#777BB4'; }
+                                else if (tech === 'Jupyter Notebook') { icon = 'fas fa-book'; color = '#F37626'; }
+                                else if (tech === 'Batchfile') { icon = 'fas fa-file-code'; color = '#6C6C6C'; }
+                                else if (tech === 'Shell') { icon = 'fas fa-terminal'; color = '#4EAA25'; }
+                                else if (tech === 'TypeScript') { icon = 'fab fa-js'; color = '#3178C6'; }
+                                else if (tech === 'SQL' || tech === 'MySQL') { icon = 'fas fa-database'; color = '#00758F'; }
+                                else if (tech === 'VBScript') { icon = 'fas fa-scroll'; color = '#4B8BBE'; }
+                                else { icon = 'fas fa-code'; color = '#fff'; }
+                                if (customImg) {
+                                    return `<span class='skill-card p-2 text-center' style='background:#18192b; border-radius:12px; min-width:60px; max-width:80px;'><img src='${customImg}' alt='${tech} logo' style='height:1.8rem; margin-bottom:2px;'/><div style='color:#fff; font-size:0.9rem;'>${tech}</div></span>`;
+                                } else {
+                                    return `<span class='skill-card p-2 text-center' style='background:#18192b; border-radius:12px; min-width:60px; max-width:80px;'><i class='${icon}' style='font-size:1.5rem; color:${color};'></i><div style='color:#fff; font-size:0.9rem;'>${tech}</div></span>`;
+                                }
+                            }).join('') : '<span class="text-secondary">Sin lenguajes detectados</span>'}
+                        </div>
+                        <div class="d-flex flex-column mt-auto pt-3 gap-2">
+                            <div class="d-flex justify-content-center gap-2">
+                                <a href="${repo.html_url}" target="_blank" class="btn btn-outline-light m-1 px-4" style="min-width:120px;"><i class="fab fa-github me-2"></i>GITHUB</a>
+                                <a href="${repo.homepage ? repo.homepage : '#'}" target="_blank" class="btn m-1 px-4" style="background:#000; color:#fff; min-width:120px; border-radius:0.375rem; border:1px solid #000;${repo.homepage ? '' : ' opacity:0.7; cursor:not-allowed;'}" ${repo.homepage ? '' : 'aria-disabled="true"'}>VER DEMO</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>`;
+        });
+        // Card de ver más
+        html += `
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow border-0 d-flex align-items-center justify-content-center" style="background: #18192b; color: #fff; min-height: 320px; max-width: 500px;">
+                <div class="card-body d-flex flex-column align-items-center justify-content-center h-100">
+                    <a href="https://github.com/${username}?tab=repositories" target="_blank" class="btn btn-primary px-5 py-3" style="font-size:1.2rem; border-radius:0.5rem; font-weight:600;"><i class="fab fa-github me-2"></i>Ver más proyectos</a>
+                </div>
+            </div>
+        </div>`;
+        container.innerHTML = html;
+    } catch (e) {
+        container.innerHTML = `
+        <div class="alert alert-danger d-flex align-items-center justify-content-center" role="alert" style="font-size:1.1rem;">
+            <i class="fas fa-exclamation-triangle me-2"></i>
+            <span>No se pudieron cargar los proyectos de GitHub.<br><small>(Error de conexión o de la API)</small></span>
+        </div>`;
+    }
+}
+document.addEventListener('DOMContentLoaded', loadGithubProjects);
+        </script>
     </body>
 </html>
