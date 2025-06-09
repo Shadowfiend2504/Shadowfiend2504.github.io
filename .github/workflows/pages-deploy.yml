@@ -1,4 +1,4 @@
-# Despliegue automático a GitHub Pages
+ # Despliegue automático a GitHub Pages
 name: Deploy to GitHub Pages
 
 on:
