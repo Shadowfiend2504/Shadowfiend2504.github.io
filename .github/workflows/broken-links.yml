@@ -1,0 +1,21 @@
+# Chequeo de enlaces rotos en el portafolio
+name: Broken Link Checker
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: '0 3 * * 0' # Cada domingo a las 3am UTC
+
+jobs:
+  check-links:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Broken Link Checker
+        uses: lycheeverse/lychee-action@v1.10.0
+        with:
+          args: --verbose --no-progress --exclude-mail --exclude "https://wa.me/" --exclude "mailto:" ./index.html ./assets/**/*.html ./css/**/*.css ./js/**/*.js
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
